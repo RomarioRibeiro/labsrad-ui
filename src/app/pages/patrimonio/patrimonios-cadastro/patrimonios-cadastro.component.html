@@ -1,0 +1,73 @@
+<main>
+
+  <p-card>
+    <div class="mb-3">
+      <span class="title colorTitle">Cadastro de Patrimonio</span>
+    </div>
+
+    <div class="flex justify-content-start mb-2">
+      <button pButton icon="pi pi-arrow-left"
+      class="p-button-primary" routerLink="/patrimonios" pTooltip="Voltar"></button>
+    </div>
+
+    <form #formPatrimonio="ngForm" (ngSubmit)="salvar(formPatrimonio)">
+      <div class="grid flex flex-wrap justify-content-center">
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Descricão</span>
+          <input type="text" pInputText name="descricao" ngModel #descricao="ngModel" [(ngModel)]="patrimonio.descricao" >
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Data Aquisição</span>
+          <p-calendar dateFormat="dd/mm/yy" name="dataaquisicao" #dataaquisocao="ngModel" ngModel placeholder="dd/mm/yyyy" [(ngModel)]="patrimonio.dataaquisicao" [showIcon]="true" [ngModelOptions]="{standalone: true}"></p-calendar>
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Valor</span>
+          <p-inputNumber mode="currency" currency="BRL"  locale="pt-BR" placeholder="0,00" ngModel name="valor" #valor="ngModel" [required]="true" [(ngModel)]="patrimonio.valor"></p-inputNumber>
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Empresa</span>
+          <p-dropdown [options]="empresas" [(ngModel)]="empresa.nome" placeholder="Selecione empresa....." [ngModelOptions]="{standalone: true}" optionLabel="nome"></p-dropdown>
+        </div>
+
+        <div class="flex flex-wrap justify-content-center">
+
+          <div class="justify-content-center ">
+
+            <div class="flex aling-items-center">
+              <h4>Status</h4>
+
+            </div>
+            <div class="flex aling-items-center">
+              <p-inputSwitch  [(ngModel)]="patrimonio.status" name="status" [ngModelOptions]="{stalone: true}"></p-inputSwitch>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="flex flex-wrap justify-content-center mt-4">
+
+        <div class="col-12 md:col-6 lg:col-3">
+          <button pButton type="submit" label="Salvar"
+            class="p-button-primary w-full" icon="pi pi-save" [disabled]="formPatrimonio.invalid || salvando"></button>
+
+        </div>
+        <div class="col-12 md:col-6 lg:col-3">
+          <button pButton type="submit" label="Excluir"
+            class="p-button-primary exluir w-full" icon="pi pi-trash"></button>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </p-card>
+
+</main>

@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@flaticon/flaticon-uicons/css/all/all";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+
+.p-button-primary {
+  color: blue;
+  background-color: #417f45 !important;
+  border: none !important;
+}
+.p-button-primary .excluir {
+  background-color: #3d3f3d !important;
+  border: none !important;
+}
+
+.p-button-primary:hover {
+  background-color: #86e18c !important;
+
+
+}
+
+
+.title {
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.colorTitle {
+color: #2f3b30;
+}
+
+
+
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
+background: #417f45 !important;
+}
+
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: #86e18c !important;
+}

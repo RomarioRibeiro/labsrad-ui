@@ -1,0 +1,88 @@
+<main>
+
+  <p-card class="card-adjust">
+
+    <div class="mb-3">
+      <span class="title colorTitle">Cadastro de Paciente</span>
+    </div>
+
+    <div class="flex justify-content-start mb-2">
+      <button pButton type="button" class="p-button-primary"
+        icon="pi pi-arrow-left" routerLink="/pacientes" pTooltip="Voltar"></button>
+    </div>
+
+    <form #formPaciente="ngForm" (ngSubmit)="salvar(formPaciente)">
+      <div class="grid flex flex-wrap ">
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>CPF</span>
+          <p-inputMask  required class="w-full" mask="999.999.999-99" placeholder="000.000.000-00" ngModel name="cpf" #cep="ngModel" [required]="true" [(ngModel)]="paciente.cpf"></p-inputMask>
+
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Nome</span>
+          <input type="text" [required]="true" pInputText name="nome" #nome="ngModel" ngModel [(ngModel)]="paciente.nome">
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Telefone</span>
+          <p-inputMask class="w-full" [required]="true" mask="(99)99999-9999" placeholder="(00)00000-0000" ngModel name="telefone" #cep="ngModel" [required]="true" [(ngModel)]="paciente.telefone"></p-inputMask>
+
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Data de Nacimento</span>
+          <p-calendar dateFormat="dd/mm/yy" [required]="true" placeholder="dd/mm/yyyy" [(ngModel)]="paciente.dataNacimento" [showIcon]="true" [ngModelOptions]="{standalone: true}"></p-calendar>
+        </div>
+
+        <div class="col-12 mb:col-6 lg:col-3 p-fluid">
+          <span>Sexo</span>
+          <p-dropdown [options]="pacientes" [(ngModel)]="paciente.sexo" placeholder="Selecione sexo....." [ngModelOptions]="{standalone: true}" optionLabel="sexo"></p-dropdown>
+        </div>
+
+      </div>
+      <div class="flex flex-wrap justify-content-center">
+
+        <div class="justify-content-center ">
+
+          <div class="flex aling-items-center">
+            <h4>Status</h4>
+
+          </div>
+          <div class="flex aling-items-center">
+            <p-inputSwitch  [(ngModel)]="paciente.status" name="status" [ngModelOptions]="{stalone: true}"></p-inputSwitch>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="flex flex-wrap justify-content-center mt-4">
+
+        <div class="col-12 md:col-6 lg:col-3">
+          <button pButton type="submit" label="Salvar"
+            class="p-button-primary w-full" icon="pi pi-save" [disabled]="formPaciente.invalid || salvando"></button>
+
+        </div>
+        <div class="col-12 md:col-6 lg:col-3">
+          <button pButton type="submit" label="Excluir"
+            class="p-button-primary exluir w-full" icon="pi pi-trash"></button>
+
+        </div>
+
+
+      </div>
+      <div *ngIf="salvando" class="grid flex justify-content-center mt-4">
+        <p-progressSpinner [style]="{width: '50px', heigth: '50px'}"
+         styleClass="custom-spinner" strokeWidth="8" animation=".5s"></p-progressSpinner>
+        <div class="grid col-12 justify-content-center">
+            <h4>Salvando aguarde...</h4>
+        </div>
+    </div>
+
+    </form>
+
+  </p-card>
+
+</main>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Empresa } from 'src/app/core/models/empresa';
-import { Patrimonio } from 'src/app/core/models/patrimonio';
+import { Empresa } from 'src/app/core/models/empresa.model';
+import { Patrimonio } from 'src/app/core/models/patrimonio.model';
 
 @Component({
   selector: 'app-patrimonios-cadastro',
@@ -22,10 +22,7 @@ export class PatrimoniosCadastroComponent implements OnInit{
   ngOnInit() {
     this.patrimonio.status = true
     this.empresas = [
-      {nome: 'Empresa01'},
-      {nome: 'Empresa02'},
-      {nome: 'Empresa03'},
-      {nome: 'Empresa04'}
+   
     ];
   }
 

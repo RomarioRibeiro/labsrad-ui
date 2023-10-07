@@ -6,7 +6,7 @@
 
 
 .p-button-primary {
-  color: blue;
+  color: #000;
   background-color: #417f45 !important;
   border: none !important;
 }
@@ -40,4 +40,10 @@ background: #417f45 !important;
 
 .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
   background: #86e18c !important;
+}
+
+
+.p-button {
+  background-color: #417f45 !important;
+  border: none !important;
 }

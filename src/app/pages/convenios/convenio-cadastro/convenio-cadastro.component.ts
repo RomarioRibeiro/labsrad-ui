@@ -1,4 +1,4 @@
-import { Convenio } from './../../../core/models/convenios';
+import { Convenio } from '../../../core/models/convenios.model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ConveniosService } from '../convenios.service';

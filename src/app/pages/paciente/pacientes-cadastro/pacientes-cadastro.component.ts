@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Paciente } from 'src/app/core/models/paciente';
+import { Paciente } from 'src/app/core/models/paciente.model';
 
 @Component({
   selector: 'app-pacientes-cadastro',
@@ -18,10 +18,7 @@ pacientes: Paciente[] | undefined;
 ngOnInit() {
 this.paciente.status = true
 this.pacientes = [
-  {sexo: ' '},
-  {sexo: 'MASCULINO'},
-  {sexo: 'FEMININO'},
-  {sexo: 'OUTROS'}
+ 
 ];
 
 }

@@ -13,6 +13,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { TableModule } from 'primeng/table';
+import { SplitterModule } from 'primeng/splitter';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 
 
@@ -31,7 +34,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
     RadioButtonModule,
     InputMaskModule,
     DropdownModule,
-    InputNumberModule
+    InputNumberModule,
+    TableModule,
+    SplitterModule,
+    SplitButtonModule
   ]
 
 })

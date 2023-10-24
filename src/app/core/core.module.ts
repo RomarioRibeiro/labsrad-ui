@@ -8,6 +8,7 @@ import { ConveniosService } from "../pages/convenios/convenios.service";
 import { UsuariosService } from "../pages/usuarios/usuarios.service";
 import { DashboardService } from "../pages/dashboard/dashboard.service";
 import { EmpresasService } from "../pages/empresas/empresas.service";
+import { MessageService } from "primeng/api";
 
 
 
@@ -18,6 +19,7 @@ import { EmpresasService } from "../pages/empresas/empresas.service";
 declarations:[],
 imports:[],
 providers:[
+MessageService,    
 ExamesService,
 AtendimentosService,
 PacienteService,

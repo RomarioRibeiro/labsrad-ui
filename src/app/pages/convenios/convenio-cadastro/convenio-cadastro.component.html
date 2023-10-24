@@ -55,7 +55,7 @@
               <div class="col-12 md:col-6 lg:col-3">
                   <span>Descrição</span>
                   <input type="text" name="descricao" #descricao="ngModel" [(ngModel)]="convenio.descricao"
-                   pInputText class="w-full"  [required]="true" minlength="2" maxlength="6" [pKeyFilter]="regex.stringNumber">
+                   pInputText class="w-full"  [required]="true" minlength="2" maxlength="60" [pKeyFilter]="regex.stringNumber">
                     <app-message [control]="descricao" error="required" text="Descrição obrigatória....."></app-message>
                     <app-message [control]="descricao" error="minlength" text="Minimo de caractere....."></app-message>
                     <app-message [control]="descricao" error="maxlength" text="Maximo de caractere....."></app-message>

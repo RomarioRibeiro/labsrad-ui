@@ -43,7 +43,11 @@ background: #417f45 !important;
 }
 
 
-.p-button {
+.btn, .p-splitbutton-defaultbutton, .p-button-icon-only {
   background-color: #417f45 !important;
   border: none !important;
+}
+
+.btn, .p-splitbutton-defaultbutton, .p-button-icon-only:hover {
+  background-color: #86e18c ;
 }

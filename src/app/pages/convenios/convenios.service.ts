@@ -15,7 +15,8 @@ export class ConveniosService {
   constructor(
     private http: HttpClient
   ) {
-    this.convenioUrl = `${environmment.apiUrl}/convenios`
+   // this.convenioUrl = `${environmment.apiUrl}/convenios`
+   this.convenioUrl = `https://65340be7e1b6f4c5904686c8.mockapi.io/convenios`
   }
 
 
@@ -23,7 +24,7 @@ export class ConveniosService {
     return firstValueFrom(
       this.http.get(`${this.convenioUrl}`)).then((response) => {
         const obj = response as any[];
-        this.converterStringDate(obj);
+       // this.converterStringDate(obj);
         return obj;
       })
 

@@ -16,6 +16,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { TableModule } from 'primeng/table';
 import { SplitterModule } from 'primeng/splitter';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -37,7 +38,8 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     InputNumberModule,
     TableModule,
     SplitterModule,
-    SplitButtonModule
+    SplitButtonModule,
+    ToastModule
   ]
 
 })

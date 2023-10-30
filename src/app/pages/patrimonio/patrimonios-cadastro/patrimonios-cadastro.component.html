@@ -1,6 +1,6 @@
 <main>
 
-  <p-card>
+  <p-card class="card-adjust">
     <div class="mb-3">
       <span class="title colorTitle">Cadastro de Patrimonio</span>
     </div>
@@ -30,25 +30,19 @@
 
         <div class="col-12 mb:col-6 lg:col-3 p-fluid">
           <span>Empresa</span>
-          <p-dropdown [options]="empresas" [(ngModel)]="empresas" placeholder="Selecione empresa....." [ngModelOptions]="{standalone: true}" optionLabel="nome"></p-dropdown>
+          <p-dropdown [options]="empresas" [(ngModel)]="patrimonio.empresa.id" name="empresa" #empresa placeholder="Selecione empresa....." [ngModelOptions]="{standalone: true}"></p-dropdown>
         </div>
-
-        <div class="flex flex-wrap justify-content-center">
-
-          <div class="justify-content-center ">
-
-            <div class="flex aling-items-center">
-              <h4>Status</h4>
-
-            </div>
-            <div class="flex aling-items-center">
-              <p-inputSwitch  [(ngModel)]="patrimonio.status" name="status" [ngModelOptions]="{stalone: true}"></p-inputSwitch>
-            </div>
-
-          </div>
+      </div>
+      <div class="flex justify-content-center">
+        <div class="flex aling-items-center justify-content-center">
+          <h4>Status</h4>
+        </div>
+      </div>
+      <div class="flex justify-content-center">
+        <div class="flex aling-items-center justify-content-center">
+          <p-inputSwitch [(ngModel)]="patrimonio.status" name="status" [ngModelOptions]="{stalone: true}"></p-inputSwitch>
 
         </div>
-
       </div>
 
       <div class="flex flex-wrap justify-content-center mt-4">

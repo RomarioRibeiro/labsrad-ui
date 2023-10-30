@@ -15,7 +15,8 @@ export class EmpresasService {
   constructor(
     private http: HttpClient
   ) {
-    this.empresaUrl = `${environmment.apiUrl}/empresas`
+   /*  this.empresaUrl = `${environmment.apiUrl}/empresas` */
+   this.empresaUrl = 'https://65340be7e1b6f4c5904686c8.mockapi.io/empresas'
   }
 
   listarEmpresas(): Promise<any> {

@@ -26,6 +26,6 @@ export class FiltroAtendimento {
     formapagamento: string;
     datalancamentode: string;
     datalancamentoate: string;
-    emailuusuario: string;
+    emailusuario: string;
     status: string
 }

@@ -6,6 +6,7 @@ import { ConverniosRoutingModule } from './convenios.routing';
 import { PacientesListComponent } from '../paciente/pacientes-list/pacientes-list.component';
 import { PacientesCadastroComponent } from '../paciente/pacientes-cadastro/pacientes-cadastro.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { UppercaseDirective } from './../../uppercase.directive';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,15 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
   ],
   imports: [
-    PrimeNGModule,
+  PrimeNGModule,
     ConverniosRoutingModule,
-    SharedModule
+    SharedModule,
+  ],
+  exports:[
+    UppercaseDirective
+
   ]
+
 
 })
 

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environmment } from 'src/environmment/environmment';
+import { environmment } from 'src/environmments/environmment';
 import { firstValueFrom } from 'rxjs';
 import * as moment from 'moment';
 import { Empresa } from 'src/app/core/models/empresa.model';

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import * as moment from 'moment';
 import { firstValueFrom } from 'rxjs';
 import { Atendimentos } from 'src/app/core/models/atendimentos.model';
-import { environmment } from 'src/environmment/environmment';
+import { environmment } from 'src/environmments/environmment';
 
 @Injectable({
   providedIn: 'root'

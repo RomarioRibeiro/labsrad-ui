@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import * as moment from 'moment-timezone';
 import { firstValueFrom } from 'rxjs';
 import { Convenio } from 'src/app/core/models/convenios.model';
-import { environmment } from 'src/environmment/environmment';
+import { environmment } from 'src/environmments/environmment';
 
 @Injectable({
   providedIn: 'root'

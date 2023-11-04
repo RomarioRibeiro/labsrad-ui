@@ -26,7 +26,8 @@ export class ConveniosListComponent implements OnInit {
   constructor(private title: Title,
     private conService: ConveniosService,
     private spinner: NgxSpinnerService,
-    private validationService: ValidationService
+    private validationService: ValidationService,
+    
   ) {
 
   }
